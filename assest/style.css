@@ -1,0 +1,122 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    /*background-position: center center;*/
+    /*background-repeat: repeat;*/
+    /*background-image: url("images/colors.png");*/
+    background: url("../images/colors.png") repeat fixed center center;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    width: 400px;
+    height: auto;
+    margin: 2rem auto;
+    transition: 1s ease;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .card-img {
+    -webkit-filter: brightness(50%);
+    transition: all 1s ease;
+}
+
+.card .card-img {
+    width: 100%;
+}
+
+.card .card-body {
+    padding: 1rem;
+}
+
+.card .card-body .card-title {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: .8rem;
+}
+
+.card .card-body .card-text, .card .card-body .card-title{
+    color: #fff;
+    line-height: 1.5;
+}
+.card .middle {
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    -webkit-filter: brightness(100%);
+}
+
+.card:hover .middle {
+    opacity: 1;
+}
+
+.card .middle .icon i {
+    color: red;
+    font-size: 4rem;
+}
+
+.card .middle .article {
+    padding: .9rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.grocery {
+    background-color: orange;
+    opacity: .9;
+}
+
+.flashcards {
+    background-color: red;
+    opacity: .9;
+}
+
+.todolist {
+    background-color: purple;
+    opacity: .9;
+}
+
+.weather {
+    background-color: lightskyblue;
+    opacity: .9;
+}
+
+.quiz {
+    background-color: lightgreen;
+    opacity: .9;
+}
+
+.marvel {
+    background-color: rebeccapurple;
+    opacity: .9;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+    }
+
+    .card:hover {
+        transform: scale(1);
+    }
+}
